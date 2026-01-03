@@ -1,0 +1,40 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<section id="portfolio" class="portfolio section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>My Projects</h2>
+    <p>A showcase of my work in Data Science, AI, and Web Development.</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4">
+      {% for project in projects %}
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+        <div class="card h-100 shadow-sm border-0">
+            {% if project.image %}
+            <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}" style="height: 200px; object-fit: cover;">
+            {% else %}
+            <div class="card-img-top bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 200px;">No Image</div>
+            {% endif %}
+            
+            <div class="card-body">
+                <h5 class="card-title fw-bold">{{ project.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ project.technologies }}</h6>
+                <p class="card-text">{{ project.description|truncatewords:20 }}</p>
+                
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <a href="{{ project.github_link }}" class="btn btn-outline-dark btn-sm" target="_blank">
+                        <i class="bi bi-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+      {% empty %}
+      <p class="text-center">No projects added yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
