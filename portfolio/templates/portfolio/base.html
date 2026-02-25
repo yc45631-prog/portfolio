@@ -4,10 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Christian Yousef </title>
   
+  <title>Christian Yousef | Informatics Engineer & Data Science Developer</title>
+  <meta name="description" content="Portfolio of Christian Yousef, an Informatics Engineer and Data Science Developer based in Tartous, Syria. Specialized in Machine Learning, Computer Vision, and NLP.">
+  <meta name="keywords" content="Christian Yousef, Informatics Engineer, Data Science, Machine Learning, Python Developer, Portfolio, Syria, Tartous">
+  <meta name="author" content="Christian Yousef">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://christianyousef.pythonanywhere.com/">
+  <meta property="og:title" content="Christian Yousef | Informatics Engineer">
+  <meta property="og:description" content="Explore the data science projects and technical expertise of Christian Yousef.">
+  
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+
   <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 </head>
 
@@ -32,14 +44,19 @@
 
   <footer id="footer" class="footer position-relative light-background">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Christian Yousef</span></strong>. All Rights Reserved
+      <div class="copyright text-center">
+        <p>&copy; Copyright <strong><span>Christian Yousef</span></strong>. All Rights Reserved</p>
+        <div class="social-links">
+          <a href="https://github.com/yc45631-prog" class="github"><i class="bi bi-github"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
       </div>
     </div>
   </footer>
 
   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/js/main.js' %}"></script>
   <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
+  
+  <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 </html>
