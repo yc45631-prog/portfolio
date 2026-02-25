@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render , get_object_or_404
 from .models import Project, Article
 
 def home(request):
@@ -32,3 +32,7 @@ def project_list(request):
 def article_list(request):
     articles = Article.objects.all().order_by('-published_date')
     return render(request, 'portfolio/articles.html', {'articles': articles})
+
+def article_detail(request, pk):
+    article = get_object_or_404(Article, id=pk)
+    return render(request, 'portfolio/article_detail.html', {'article': article})
